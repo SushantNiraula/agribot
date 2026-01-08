@@ -1,0 +1,601 @@
+<?xml version="1.0" ?>
+<robot name="agribot" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find agribot_description)/urdf/materials.xacro" />
+<xacro:include filename="$(find agribot_description)/urdf/agribot.ros2control" />
+<xacro:include filename="$(find agribot_description)/urdf/agribot.gazebo" />
+<link name="base_link">
+  <inertial>
+    <origin xyz="0.004432349013620612 -7.841698476696025e-07 -0.004748707157977561" rpy="0 0 0"/>
+    <mass value="2.649489026530686"/>
+    <inertia ixx="0.044199" iyy="0.025957" izz="0.057874" ixy="-0.0" iyz="0.0" ixz="0.001278"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find agribot_description)/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find agribot_description)/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="motor_mount_1">
+  <inertial>
+    <origin xyz="-0.0022092008966159704 -0.00456858699341936 -0.0022092008820991937" rpy="0 0 0"/>
+    <mass value="0.01743940222270842"/>
+    <inertia ixx="6e-06" iyy="5e-06" izz="6e-06" ixy="-1e-06" iyz="-1e-06" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.305668 0.18 0.205668" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find agribot_description)/meshes/motor_mount_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.305668 0.18 0.205668" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find agribot_description)/meshes/motor_mount_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="motor_mount_2">
+  <inertial>
+    <origin xyz="-0.0022095734118441554 -0.004568586993409202 -0.0022092008820991937" rpy="0 0 0"/>
+    <mass value="0.01743940222270842"/>
+    <inertia ixx="6e-06" iyy="5e-06" izz="6e-06" ixy="-1e-06" iyz="-1e-06" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.044038 0.18 0.205668" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find agribot_description)/meshes/motor_mount_2.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.044038 0.18 0.205668" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find agribot_description)/meshes/motor_mount_2.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="motor_mount_3">
+  <inertial>
+    <origin xyz="0.0022092008821049114 -0.004568586993401569 -0.002209200896621355" rpy="0 0 0"/>
+    <mass value="0.01743940222270842"/>
+    <inertia ixx="6e-06" iyy="5e-06" izz="6e-06" ixy="1e-06" iyz="-1e-06" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.305668 0.18 0.205668" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find agribot_description)/meshes/motor_mount_3.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.305668 0.18 0.205668" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find agribot_description)/meshes/motor_mount_3.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="motor_mount_4">
+  <inertial>
+    <origin xyz="-0.0022092008821046893 0.004568586993401735 -0.002209200896621133" rpy="0 0 0"/>
+    <mass value="0.01743940222270842"/>
+    <inertia ixx="6e-06" iyy="5e-06" izz="6e-06" ixy="1e-06" iyz="1e-06" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.305668 -0.18 0.205668" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find agribot_description)/meshes/motor_mount_4.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.305668 -0.18 0.205668" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find agribot_description)/meshes/motor_mount_4.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="motor_mount_5">
+  <inertial>
+    <origin xyz="-0.002209573397332902 0.004568586993411894 -0.002209200896621133" rpy="0 0 0"/>
+    <mass value="0.01743940222270842"/>
+    <inertia ixx="6e-06" iyy="5e-06" izz="6e-06" ixy="1e-06" iyz="1e-06" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.044038 -0.18 0.205668" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find agribot_description)/meshes/motor_mount_5.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.044038 -0.18 0.205668" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find agribot_description)/meshes/motor_mount_5.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="motor_mount_6">
+  <inertial>
+    <origin xyz="0.002209200896616137 0.00456858699341961 -0.002209200882099277" rpy="0 0 0"/>
+    <mass value="0.01743940222270842"/>
+    <inertia ixx="6e-06" iyy="5e-06" izz="6e-06" ixy="-1e-06" iyz="1e-06" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.305668 -0.18 0.205668" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find agribot_description)/meshes/motor_mount_6.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.305668 -0.18 0.205668" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find agribot_description)/meshes/motor_mount_6.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="motor_1">
+  <inertial>
+    <origin xyz="-0.011036049168308915 0.032900619363953165 0.010882072426481426" rpy="0 0 0"/>
+    <mass value="0.4814783214697331"/>
+    <inertia ixx="0.000239" iyy="7.4e-05" izz="0.000239" ixy="-1e-06" iyz="-1e-06" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.310313 0.199235 0.232233" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find agribot_description)/meshes/motor_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.310313 0.199235 0.232233" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find agribot_description)/meshes/motor_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="motor_2">
+  <inertial>
+    <origin xyz="-0.011036421683536465 0.032899619363963795 0.010882072426481426" rpy="0 0 0"/>
+    <mass value="0.4814783214697331"/>
+    <inertia ixx="0.000239" iyy="7.4e-05" izz="0.000239" ixy="-1e-06" iyz="-1e-06" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.039393 0.199234 0.232233" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find agribot_description)/meshes/motor_2.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.039393 0.199234 0.232233" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find agribot_description)/meshes/motor_2.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="motor_3">
+  <inertial>
+    <origin xyz="-0.010882072426476319 0.03289961936397218 -0.011036049168313106" rpy="0 0 0"/>
+    <mass value="0.4814783214697331"/>
+    <inertia ixx="0.000239" iyy="7.4e-05" izz="0.000239" ixy="1e-06" iyz="-1e-06" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.332233 0.199234 0.210313" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find agribot_description)/meshes/motor_3.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.332233 0.199234 0.210313" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find agribot_description)/meshes/motor_3.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="motor_4">
+  <inertial>
+    <origin xyz="0.011036049168307749 -0.032900619363953415 0.010882072426481426" rpy="0 0 0"/>
+    <mass value="0.4814783214697331"/>
+    <inertia ixx="0.000239" iyy="7.4e-05" izz="0.000239" ixy="-1e-06" iyz="1e-06" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.310313 -0.199235 0.232233" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find agribot_description)/meshes/motor_4.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.310313 -0.199235 0.232233" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find agribot_description)/meshes/motor_4.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="motor_5">
+  <inertial>
+    <origin xyz="0.01088169991124828 -0.0329006193639618 -0.011036049168312356" rpy="0 0 0"/>
+    <mass value="0.4814783214697331"/>
+    <inertia ixx="0.000239" iyy="7.4e-05" izz="0.000239" ixy="1e-06" iyz="1e-06" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.017473 -0.199235 0.210313" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find agribot_description)/meshes/motor_5.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.017473 -0.199235 0.210313" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find agribot_description)/meshes/motor_5.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="motor_6">
+  <inertial>
+    <origin xyz="0.010882072426476486 -0.03289961936397137 -0.011036049168313605" rpy="0 0 0"/>
+    <mass value="0.4814783214697331"/>
+    <inertia ixx="0.000239" iyy="7.4e-05" izz="0.000239" ixy="1e-06" iyz="1e-06" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.332233 -0.199234 0.210313" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find agribot_description)/meshes/motor_6.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.332233 -0.199234 0.210313" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find agribot_description)/meshes/motor_6.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="right_rear_link_1">
+  <inertial>
+    <origin xyz="-3.615299791759341e-07 0.012371192469723291 -2.6967430341584553e-07" rpy="0 0 0"/>
+    <mass value="0.22366924861365764"/>
+    <inertia ixx="0.000183" iyy="0.000329" izz="0.000183" ixy="0.0" iyz="0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.325457 -0.219735 0.226988" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find agribot_description)/meshes/right_rear_link_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.325457 -0.219735 0.226988" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find agribot_description)/meshes/right_rear_link_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="right_mid_link_1">
+  <inertial>
+    <origin xyz="1.7341259867312275e-07 0.012371192469714493 -4.540721616208554e-07" rpy="0 0 0"/>
+    <mass value="0.22366924861365764"/>
+    <inertia ixx="0.000183" iyy="0.000329" izz="0.000183" ixy="0.0" iyz="0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.023483 -0.219735 0.226222" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find agribot_description)/meshes/right_mid_link_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.023483 -0.219735 0.226222" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find agribot_description)/meshes/right_mid_link_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="right_front_link_1">
+  <inertial>
+    <origin xyz="-4.540721732504416e-07 0.012372192469705112 -4.540721606216547e-07" rpy="0 0 0"/>
+    <mass value="0.22366924861365764"/>
+    <inertia ixx="0.000183" iyy="0.000329" izz="0.000183" ixy="0.0" iyz="0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.326222 -0.219734 0.226222" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find agribot_description)/meshes/right_front_link_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.326222 -0.219734 0.226222" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find agribot_description)/meshes/right_front_link_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="left_front_link_1">
+  <inertial>
+    <origin xyz="-4.540721597057207e-07 -0.012371192469723541 -4.54072175054554e-07" rpy="0 0 0"/>
+    <mass value="0.22366924861365764"/>
+    <inertia ixx="0.000183" iyy="0.000329" izz="0.000183" ixy="-0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.326222 0.219735 0.226222" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find agribot_description)/meshes/left_front_link_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.326222 0.219735 0.226222" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find agribot_description)/meshes/left_front_link_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="left_mid_link_1">
+  <inertial>
+    <origin xyz="1.7341260548017767e-07 -0.007372192469713046 -4.540721796064684e-07" rpy="0 0 0"/>
+    <mass value="0.22366924861365764"/>
+    <inertia ixx="0.000183" iyy="0.000329" izz="0.000183" ixy="-0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.023483 0.219734 0.226222" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find agribot_description)/meshes/left_mid_link_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.023483 0.219734 0.226222" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find agribot_description)/meshes/left_mid_link_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="left_rear_link_1">
+  <inertial>
+    <origin xyz="4.5407217624804375e-07 -0.012372192469704363 -4.540721760537547e-07" rpy="0 0 0"/>
+    <mass value="0.22366924861365764"/>
+    <inertia ixx="0.000183" iyy="0.000329" izz="0.000183" ixy="-0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.326222 0.219734 0.226222" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find agribot_description)/meshes/left_rear_link_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.326222 0.219734 0.226222" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find agribot_description)/meshes/left_rear_link_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="imu_link_1">
+  <inertial>
+    <origin xyz="-0.00015090881248273902 -0.0009023841279497263 -0.0007671413731985717" rpy="0 0 0"/>
+    <mass value="0.06787415121849628"/>
+    <inertia ixx="9e-06" iyy="1.4e-05" izz="2.2e-05" ixy="-0.0" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.05 0.095 -0.028" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find agribot_description)/meshes/imu_link_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.05 0.095 -0.028" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find agribot_description)/meshes/imu_link_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="lidar_link_1">
+  <inertial>
+    <origin xyz="0.05105684472921116 -2.636779683484747e-16 0.011388122125470204" rpy="0 0 0"/>
+    <mass value="0.24203789804385267"/>
+    <inertia ixx="9.8e-05" iyy="0.000133" izz="0.00018" ixy="-0.0" iyz="-0.0" ixz="-1.1e-05"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.07 -0.015 -0.03" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find agribot_description)/meshes/lidar_link_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.07 -0.015 -0.03" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find agribot_description)/meshes/lidar_link_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="camera_link_1">
+  <inertial>
+    <origin xyz="-0.0013714426208874114 -0.00042424757888015035 -2.5683858685676686e-10" rpy="0 0 0"/>
+    <mass value="0.3825680956213953"/>
+    <inertia ixx="0.000186" iyy="6.2e-05" izz="0.000153" ixy="-2e-06" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.105 0.0 -0.0125" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find agribot_description)/meshes/camera_link_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.105 0.0 -0.0125" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find agribot_description)/meshes/camera_link_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<joint name="Rigid 27" type="fixed">
+  <origin xyz="-0.305668 -0.18 -0.205668" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="motor_mount_1"/>
+</joint>
+
+<joint name="Rigid 28" type="fixed">
+  <origin xyz="0.044038 -0.18 -0.205668" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="motor_mount_2"/>
+</joint>
+
+<joint name="Rigid 29" type="fixed">
+  <origin xyz="0.305668 -0.18 -0.205668" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="motor_mount_3"/>
+</joint>
+
+<joint name="Rigid 30" type="fixed">
+  <origin xyz="-0.305668 0.18 -0.205668" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="motor_mount_4"/>
+</joint>
+
+<joint name="Rigid 31" type="fixed">
+  <origin xyz="0.044038 0.18 -0.205668" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="motor_mount_5"/>
+</joint>
+
+<joint name="Rigid 32" type="fixed">
+  <origin xyz="0.305668 0.18 -0.205668" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="motor_mount_6"/>
+</joint>
+
+<joint name="Rigid 33" type="fixed">
+  <origin xyz="-0.004645 -0.019235 -0.026565" rpy="0 0 0"/>
+  <parent link="motor_mount_1"/>
+  <child link="motor_1"/>
+</joint>
+
+<joint name="Rigid 34" type="fixed">
+  <origin xyz="-0.004645 -0.019234 -0.026565" rpy="0 0 0"/>
+  <parent link="motor_mount_2"/>
+  <child link="motor_2"/>
+</joint>
+
+<joint name="Rigid 35" type="fixed">
+  <origin xyz="0.026565 -0.019234 -0.004645" rpy="0 0 0"/>
+  <parent link="motor_mount_3"/>
+  <child link="motor_3"/>
+</joint>
+
+<joint name="Rigid 36" type="fixed">
+  <origin xyz="0.004645 0.019235 -0.026565" rpy="0 0 0"/>
+  <parent link="motor_mount_6"/>
+  <child link="motor_4"/>
+</joint>
+
+<joint name="Rigid 37" type="fixed">
+  <origin xyz="-0.026565 0.019235 -0.004645" rpy="0 0 0"/>
+  <parent link="motor_mount_5"/>
+  <child link="motor_5"/>
+</joint>
+
+<joint name="Rigid 38" type="fixed">
+  <origin xyz="-0.026565 0.019234 -0.004645" rpy="0 0 0"/>
+  <parent link="motor_mount_4"/>
+  <child link="motor_6"/>
+</joint>
+
+<joint name="right_rear_joint" type="continuous">
+  <origin xyz="0.015144 0.0205 0.005245" rpy="0 0 0"/>
+  <parent link="motor_4"/>
+  <child link="right_rear_link_1"/>
+  <axis xyz="0.0 1.0 0.0"/>
+</joint>
+
+<joint name="Revolute 40" type="continuous">
+  <origin xyz="0.00601 0.0205 -0.015909" rpy="0 0 0"/>
+  <parent link="motor_5"/>
+  <child link="right_mid_link_1"/>
+  <axis xyz="-0.0 1.0 -0.0"/>
+</joint>
+
+<joint name="Revolute 41" type="continuous">
+  <origin xyz="0.006011 0.0205 -0.015909" rpy="0 0 0"/>
+  <parent link="motor_6"/>
+  <child link="right_front_link_1"/>
+  <axis xyz="-0.0 1.0 -0.0"/>
+</joint>
+
+<joint name="Revolute 42" type="continuous">
+  <origin xyz="-0.015909 -0.0205 0.006011" rpy="0 0 0"/>
+  <parent link="motor_1"/>
+  <child link="left_front_link_1"/>
+  <axis xyz="0.0 -1.0 0.0"/>
+</joint>
+
+<joint name="Revolute 43" type="continuous">
+  <origin xyz="-0.01591 -0.0205 0.006011" rpy="0 0 0"/>
+  <parent link="motor_2"/>
+  <child link="left_mid_link_1"/>
+  <axis xyz="0.0 -1.0 0.0"/>
+</joint>
+
+<joint name="Revolute 44" type="continuous">
+  <origin xyz="-0.006011 -0.0205 -0.015909" rpy="0 0 0"/>
+  <parent link="motor_3"/>
+  <child link="left_rear_link_1"/>
+  <axis xyz="0.0 -1.0 -0.0"/>
+</joint>
+
+<joint name="Rigid 45" type="fixed">
+  <origin xyz="-0.05 -0.095 0.028" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="imu_link_1"/>
+</joint>
+
+<joint name="Rigid 46" type="fixed">
+  <origin xyz="-0.07 0.015 0.03" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="lidar_link_1"/>
+</joint>
+
+<joint name="Rigid 47" type="fixed">
+  <origin xyz="-0.105 0.0 0.0125" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="camera_link_1"/>
+</joint>
+
+</robot>
