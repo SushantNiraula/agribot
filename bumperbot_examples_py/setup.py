@@ -24,6 +24,7 @@ setup(
     },
     entry_points={
         'console_scripts': [
+            "simple_parameter = bumperbot_examples_py.simple_parameter:main",
         ],
     },
 )
