@@ -34,5 +34,11 @@
         <minDepth>0.001</minDepth>
         <maxVel>0.1</maxVel>
     </gazebo>
+    <gazebo>
+        <plugin filename="gz_ros2_control-system" name="gz_ros2_control::GazeboSimROS2ControlPlugin">
+            <Parameters></Parameters>
+        </plugin>
+    </gazebo>
+
     
 </robot>

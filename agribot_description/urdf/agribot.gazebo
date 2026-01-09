@@ -97,43 +97,73 @@
 
 <gazebo reference="right_rear_link_1">
   <material>${body_color}</material>
-  <mu1>0.2</mu1>
-  <mu2>0.2</mu2>
+  <mu1>100000000000000.0</mu1>
+  <mu2>100000000000000.0</mu2>
+  <kp>1000000000000.0</kp>
+  <kd>10.0</kd>
+  <minDepth>0.001</minDepth>
+  <maxVel>0.1</maxVel>
+  <fdir1>1 0 0</fdir1>
   <self_collide>true</self_collide>
 </gazebo>
 
 <gazebo reference="right_mid_link_1">
   <material>${body_color}</material>
-  <mu1>0.2</mu1>
-  <mu2>0.2</mu2>
+  <mu1>100000000000000.0</mu1>
+  <mu2>100000000000000.0</mu2>
+  <kp>1000000000000.0</kp>
+  <kd>10.0</kd>
+  <minDepth>0.001</minDepth>
+  <maxVel>0.1</maxVel>
+  <fdir1>1 0 0</fdir1>
   <self_collide>true</self_collide>
 </gazebo>
 
 <gazebo reference="right_front_link_1">
   <material>${body_color}</material>
-  <mu1>0.2</mu1>
-  <mu2>0.2</mu2>
+  <mu1>100000000000000.0</mu1>
+  <mu2>100000000000000.0</mu2>
+  <kp>1000000000000.0</kp>
+  <kd>10.0</kd>
+  <minDepth>0.001</minDepth>
+  <maxVel>0.1</maxVel>
+  <fdir1>1 0 0</fdir1>
   <self_collide>true</self_collide>
 </gazebo>
 
 <gazebo reference="left_front_link_1">
   <material>${body_color}</material>
-  <mu1>0.2</mu1>
-  <mu2>0.2</mu2>
+  <mu1>100000000000000.0</mu1>
+  <mu2>100000000000000.0</mu2>
+  <kp>1000000000000.0</kp>
+  <kd>10.0</kd>
+  <minDepth>0.001</minDepth>
+  <maxVel>0.1</maxVel>
+  <fdir1>1 0 0</fdir1>
   <self_collide>true</self_collide>
 </gazebo>
 
 <gazebo reference="left_mid_link_1">
   <material>${body_color}</material>
-  <mu1>0.2</mu1>
-  <mu2>0.2</mu2>
+  <mu1>100000000000000.0</mu1>
+  <mu2>100000000000000.0</mu2>
+  <kp>1000000000000.0</kp>
+  <kd>10.0</kd>
+  <minDepth>0.001</minDepth>
+  <maxVel>0.1</maxVel>
+  <fdir1>1 0 0</fdir1>
   <self_collide>true</self_collide>
 </gazebo>
 
 <gazebo reference="left_rear_link_1">
   <material>${body_color}</material>
-  <mu1>0.2</mu1>
-  <mu2>0.2</mu2>
+  <mu1>100000000000000.0</mu1>
+  <mu2>100000000000000.0</mu2>
+  <kp>1000000000000.0</kp>
+  <kd>10.0</kd>
+  <minDepth>0.001</minDepth>
+  <maxVel>0.1</maxVel>
+  <fdir1>1 0 0</fdir1>
   <self_collide>true</self_collide>
 </gazebo>
 
