@@ -10,7 +10,7 @@ find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
 
 install(
-  DIRECTORY meshes urdf
+  DIRECTORY meshes urdf launch config
   DESTINATION share/${PROJECT_NAME}
 
 )
