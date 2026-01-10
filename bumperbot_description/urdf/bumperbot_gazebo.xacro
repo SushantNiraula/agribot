@@ -1,6 +1,8 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="bumperbot">
+    <xacro:property name="body_color" value="Gazebo/Silver" />
     <gazebo reference= "wheel_right_link">
+        <material>${body_color}</material>
         <mu1>100000000000000.0</mu1>
         <mu2>100000000000000.0</mu2>
         <kp>1000000000000.0</kp>
@@ -10,6 +12,7 @@
         <fdir1>1 0 0</fdir1>
     </gazebo>
     <gazebo reference= "wheel_left_link">
+    <material>${body_color}</material>
         <mu1>100000000000000.0</mu1>
         <mu2>100000000000000.0</mu2>
         <kp>1000000000000.0</kp>
@@ -19,6 +22,7 @@
         <fdir1>1 0 0</fdir1>
     </gazebo>
     <gazebo reference= "caster_front_link">
+    <material>${body_color}</material>
         <mu1>0.1</mu1>
         <mu2>0.1</mu2>
         <kp>1000000.0</kp>
@@ -27,6 +31,7 @@
         <maxVel>0.1</maxVel>
     </gazebo>
     <gazebo reference= "caster_rear_link">
+    <material>${body_color}</material>
         <mu1>0.1</mu1>
         <mu2>0.1</mu2>
         <kp>1000000.0</kp>
@@ -36,7 +41,7 @@
     </gazebo>
     <gazebo>
         <plugin filename="gz_ros2_control-system" name="gz_ros2_control::GazeboSimROS2ControlPlugin">
-            <Parameters></Parameters>
+            <Parameters>$(find bumperbot_controller)/config/bumperbot_controller.yaml</Parameters>
         </plugin>
     </gazebo>
 
