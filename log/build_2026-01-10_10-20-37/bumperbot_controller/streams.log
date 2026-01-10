@@ -1,0 +1,41 @@
+[0.446s] Invoking command in '/home/sushant-ros/my_bots/src/build/bumperbot_controller': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/sushant-ros/my_bots/install/bumperbot_examples_py:/home/sushant-ros/my_bots/install/agribot_description:/home/sushant-ros/Coding/ROS2_Learning/ROS2_Basics/ros2_ws/install/my_py_pkg:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/sushant-ros/my_bots/src/bumperbot_controller -DCMAKE_INSTALL_PREFIX=/home/sushant-ros/my_bots/src/install/bumperbot_controller
+[0.620s] -- The C compiler identification is GNU 13.3.0
+[0.781s] -- The CXX compiler identification is GNU 13.3.0
+[0.819s] -- Detecting C compiler ABI info
+[1.033s] -- Detecting C compiler ABI info - done
+[1.065s] -- Check for working C compiler: /usr/bin/cc - skipped
+[1.065s] -- Detecting C compile features
+[1.067s] -- Detecting C compile features - done
+[1.095s] -- Detecting CXX compiler ABI info
+[1.408s] -- Detecting CXX compiler ABI info - done
+[1.441s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[1.441s] -- Detecting CXX compile features
+[1.443s] -- Detecting CXX compile features - done
+[1.457s] -- Found ament_cmake: 2.5.4 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[1.873s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[2.376s] -- Configuring done (1.9s)
+[2.383s] -- Generating done (0.0s)
+[2.388s] -- Build files have been written to: /home/sushant-ros/my_bots/src/build/bumperbot_controller
+[2.406s] Invoked command in '/home/sushant-ros/my_bots/src/build/bumperbot_controller' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/sushant-ros/my_bots/install/bumperbot_examples_py:/home/sushant-ros/my_bots/install/agribot_description:/home/sushant-ros/Coding/ROS2_Learning/ROS2_Basics/ros2_ws/install/my_py_pkg:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/sushant-ros/my_bots/src/bumperbot_controller -DCMAKE_INSTALL_PREFIX=/home/sushant-ros/my_bots/src/install/bumperbot_controller
+[2.407s] Invoking command in '/home/sushant-ros/my_bots/src/build/bumperbot_controller': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/sushant-ros/my_bots/install/bumperbot_examples_py:/home/sushant-ros/my_bots/install/agribot_description:/home/sushant-ros/Coding/ROS2_Learning/ROS2_Basics/ros2_ws/install/my_py_pkg:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/sushant-ros/my_bots/src/build/bumperbot_controller -- -j8 -l8
+[2.510s] Invoked command in '/home/sushant-ros/my_bots/src/build/bumperbot_controller' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/sushant-ros/my_bots/install/bumperbot_examples_py:/home/sushant-ros/my_bots/install/agribot_description:/home/sushant-ros/Coding/ROS2_Learning/ROS2_Basics/ros2_ws/install/my_py_pkg:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/sushant-ros/my_bots/src/build/bumperbot_controller -- -j8 -l8
+[2.533s] Invoking command in '/home/sushant-ros/my_bots/src/build/bumperbot_controller': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/sushant-ros/my_bots/install/bumperbot_examples_py:/home/sushant-ros/my_bots/install/agribot_description:/home/sushant-ros/Coding/ROS2_Learning/ROS2_Basics/ros2_ws/install/my_py_pkg:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/sushant-ros/my_bots/src/build/bumperbot_controller
+[2.551s] -- Install configuration: ""
+[2.551s] -- Installing: /home/sushant-ros/my_bots/src/install/bumperbot_controller/share/bumperbot_controller/config
+[2.551s] -- Installing: /home/sushant-ros/my_bots/src/install/bumperbot_controller/share/bumperbot_controller/config/bumperbot_controller.yaml
+[2.552s] -- Installing: /home/sushant-ros/my_bots/src/install/bumperbot_controller/share/ament_index/resource_index/package_run_dependencies/bumperbot_controller
+[2.552s] -- Installing: /home/sushant-ros/my_bots/src/install/bumperbot_controller/share/ament_index/resource_index/parent_prefix_path/bumperbot_controller
+[2.552s] -- Installing: /home/sushant-ros/my_bots/src/install/bumperbot_controller/share/bumperbot_controller/environment/ament_prefix_path.sh
+[2.553s] -- Installing: /home/sushant-ros/my_bots/src/install/bumperbot_controller/share/bumperbot_controller/environment/ament_prefix_path.dsv
+[2.553s] -- Installing: /home/sushant-ros/my_bots/src/install/bumperbot_controller/share/bumperbot_controller/environment/path.sh
+[2.553s] -- Installing: /home/sushant-ros/my_bots/src/install/bumperbot_controller/share/bumperbot_controller/environment/path.dsv
+[2.554s] -- Installing: /home/sushant-ros/my_bots/src/install/bumperbot_controller/share/bumperbot_controller/local_setup.bash
+[2.554s] -- Installing: /home/sushant-ros/my_bots/src/install/bumperbot_controller/share/bumperbot_controller/local_setup.sh
+[2.555s] -- Installing: /home/sushant-ros/my_bots/src/install/bumperbot_controller/share/bumperbot_controller/local_setup.zsh
+[2.555s] -- Installing: /home/sushant-ros/my_bots/src/install/bumperbot_controller/share/bumperbot_controller/local_setup.dsv
+[2.555s] -- Installing: /home/sushant-ros/my_bots/src/install/bumperbot_controller/share/bumperbot_controller/package.dsv
+[2.556s] -- Installing: /home/sushant-ros/my_bots/src/install/bumperbot_controller/share/ament_index/resource_index/packages/bumperbot_controller
+[2.556s] -- Installing: /home/sushant-ros/my_bots/src/install/bumperbot_controller/share/bumperbot_controller/cmake/bumperbot_controllerConfig.cmake
+[2.557s] -- Installing: /home/sushant-ros/my_bots/src/install/bumperbot_controller/share/bumperbot_controller/cmake/bumperbot_controllerConfig-version.cmake
+[2.557s] -- Installing: /home/sushant-ros/my_bots/src/install/bumperbot_controller/share/bumperbot_controller/package.xml
+[2.559s] Invoked command in '/home/sushant-ros/my_bots/src/build/bumperbot_controller' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/sushant-ros/my_bots/install/bumperbot_examples_py:/home/sushant-ros/my_bots/install/agribot_description:/home/sushant-ros/Coding/ROS2_Learning/ROS2_Basics/ros2_ws/install/my_py_pkg:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/sushant-ros/my_bots/src/build/bumperbot_controller

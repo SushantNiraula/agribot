@@ -1,0 +1,65 @@
+running egg_info
+creating ../build/agribot_description/agribot_description.egg-info
+writing ../build/agribot_description/agribot_description.egg-info/PKG-INFO
+writing dependency_links to ../build/agribot_description/agribot_description.egg-info/dependency_links.txt
+writing requirements to ../build/agribot_description/agribot_description.egg-info/requires.txt
+writing top-level names to ../build/agribot_description/agribot_description.egg-info/top_level.txt
+writing manifest file '../build/agribot_description/agribot_description.egg-info/SOURCES.txt'
+reading manifest file '../build/agribot_description/agribot_description.egg-info/SOURCES.txt'
+writing manifest file '../build/agribot_description/agribot_description.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/sushant-ros/my_bots/src/build/agribot_description/build
+creating /home/sushant-ros/my_bots/src/build/agribot_description/build/lib
+creating /home/sushant-ros/my_bots/src/build/agribot_description/build/lib/agribot_description
+copying agribot_description/__init__.py -> /home/sushant-ros/my_bots/src/build/agribot_description/build/lib/agribot_description
+running install
+running install_lib
+creating /home/sushant-ros/my_bots/src/install/agribot_description/lib/python3.12/site-packages/agribot_description
+copying /home/sushant-ros/my_bots/src/build/agribot_description/build/lib/agribot_description/__init__.py -> /home/sushant-ros/my_bots/src/install/agribot_description/lib/python3.12/site-packages/agribot_description
+byte-compiling /home/sushant-ros/my_bots/src/install/agribot_description/lib/python3.12/site-packages/agribot_description/__init__.py to __init__.cpython-312.pyc
+running install_data
+creating /home/sushant-ros/my_bots/src/install/agribot_description/share/ament_index
+creating /home/sushant-ros/my_bots/src/install/agribot_description/share/ament_index/resource_index
+creating /home/sushant-ros/my_bots/src/install/agribot_description/share/ament_index/resource_index/packages
+copying resource/agribot_description -> /home/sushant-ros/my_bots/src/install/agribot_description/share/ament_index/resource_index/packages
+copying package.xml -> /home/sushant-ros/my_bots/src/install/agribot_description/share/agribot_description
+creating /home/sushant-ros/my_bots/src/install/agribot_description/share/agribot_description/launch
+copying launch/gazebo.launch.py -> /home/sushant-ros/my_bots/src/install/agribot_description/share/agribot_description/launch
+copying launch/display.launch.py -> /home/sushant-ros/my_bots/src/install/agribot_description/share/agribot_description/launch
+creating /home/sushant-ros/my_bots/src/install/agribot_description/share/agribot_description/urdf
+copying urdf/materials.xacro -> /home/sushant-ros/my_bots/src/install/agribot_description/share/agribot_description/urdf
+copying urdf/agribot.ros2control -> /home/sushant-ros/my_bots/src/install/agribot_description/share/agribot_description/urdf
+copying urdf/agribot.gazebo -> /home/sushant-ros/my_bots/src/install/agribot_description/share/agribot_description/urdf
+copying urdf/agribot.xacro -> /home/sushant-ros/my_bots/src/install/agribot_description/share/agribot_description/urdf
+creating /home/sushant-ros/my_bots/src/install/agribot_description/share/agribot_description/meshes
+copying meshes/motor_3.stl -> /home/sushant-ros/my_bots/src/install/agribot_description/share/agribot_description/meshes
+copying meshes/base_link.stl -> /home/sushant-ros/my_bots/src/install/agribot_description/share/agribot_description/meshes
+copying meshes/camera_link_1.stl -> /home/sushant-ros/my_bots/src/install/agribot_description/share/agribot_description/meshes
+copying meshes/motor_mount_2.stl -> /home/sushant-ros/my_bots/src/install/agribot_description/share/agribot_description/meshes
+copying meshes/motor_mount_5.stl -> /home/sushant-ros/my_bots/src/install/agribot_description/share/agribot_description/meshes
+copying meshes/motor_6.stl -> /home/sushant-ros/my_bots/src/install/agribot_description/share/agribot_description/meshes
+copying meshes/left_rear_link_1.stl -> /home/sushant-ros/my_bots/src/install/agribot_description/share/agribot_description/meshes
+copying meshes/motor_mount_4.stl -> /home/sushant-ros/my_bots/src/install/agribot_description/share/agribot_description/meshes
+copying meshes/lidar_link_1.stl -> /home/sushant-ros/my_bots/src/install/agribot_description/share/agribot_description/meshes
+copying meshes/left_mid_link_1.stl -> /home/sushant-ros/my_bots/src/install/agribot_description/share/agribot_description/meshes
+copying meshes/motor_mount_6.stl -> /home/sushant-ros/my_bots/src/install/agribot_description/share/agribot_description/meshes
+copying meshes/motor_1.stl -> /home/sushant-ros/my_bots/src/install/agribot_description/share/agribot_description/meshes
+copying meshes/motor_mount_3.stl -> /home/sushant-ros/my_bots/src/install/agribot_description/share/agribot_description/meshes
+copying meshes/motor_2.stl -> /home/sushant-ros/my_bots/src/install/agribot_description/share/agribot_description/meshes
+copying meshes/motor_4.stl -> /home/sushant-ros/my_bots/src/install/agribot_description/share/agribot_description/meshes
+copying meshes/motor_mount_1.stl -> /home/sushant-ros/my_bots/src/install/agribot_description/share/agribot_description/meshes
+copying meshes/left_front_link_1.stl -> /home/sushant-ros/my_bots/src/install/agribot_description/share/agribot_description/meshes
+copying meshes/right_mid_link_1.stl -> /home/sushant-ros/my_bots/src/install/agribot_description/share/agribot_description/meshes
+copying meshes/motor_5.stl -> /home/sushant-ros/my_bots/src/install/agribot_description/share/agribot_description/meshes
+copying meshes/imu_link_1.stl -> /home/sushant-ros/my_bots/src/install/agribot_description/share/agribot_description/meshes
+copying meshes/right_rear_link_1.stl -> /home/sushant-ros/my_bots/src/install/agribot_description/share/agribot_description/meshes
+copying meshes/right_front_link_1.stl -> /home/sushant-ros/my_bots/src/install/agribot_description/share/agribot_description/meshes
+creating /home/sushant-ros/my_bots/src/install/agribot_description/share/agribot_description/config
+copying config/display.rviz -> /home/sushant-ros/my_bots/src/install/agribot_description/share/agribot_description/config
+copying config/ros_gz_bridge_gazebo.yaml -> /home/sushant-ros/my_bots/src/install/agribot_description/share/agribot_description/config
+copying config/gazebo.rviz -> /home/sushant-ros/my_bots/src/install/agribot_description/share/agribot_description/config
+running install_egg_info
+Copying ../build/agribot_description/agribot_description.egg-info to /home/sushant-ros/my_bots/src/install/agribot_description/lib/python3.12/site-packages/agribot_description-0.0.0-py3.12.egg-info
+running install_scripts
+writing list of installed files to '/home/sushant-ros/my_bots/src/build/agribot_description/install.log'

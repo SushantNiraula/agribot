@@ -467,7 +467,7 @@
   </collision>
 </link>
 
-<joint name="world" type="fixed">
+<joint name="world_joint" type="fixed">
   <parent link="base_footprint"/>
   <child link="base_link"/>
   <origin xyz="0.0 0.0 0.27431" rpy="0.0 0.0 0.0"/>

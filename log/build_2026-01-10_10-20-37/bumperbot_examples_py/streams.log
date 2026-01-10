@@ -1,0 +1,37 @@
+[2.847s] Invoking command in '/home/sushant-ros/my_bots/src/bumperbot_examples_py': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/sushant-ros/my_bots/src/build/bumperbot_examples_py/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/sushant-ros/my_bots/src/install/bumperbot_examples_py/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/bumperbot_examples_py build --build-base /home/sushant-ros/my_bots/src/build/bumperbot_examples_py/build install --record /home/sushant-ros/my_bots/src/build/bumperbot_examples_py/install.log --single-version-externally-managed install_data
+[3.392s] running egg_info
+[3.392s] creating ../build/bumperbot_examples_py/bumperbot_examples_py.egg-info
+[3.439s] writing ../build/bumperbot_examples_py/bumperbot_examples_py.egg-info/PKG-INFO
+[3.439s] writing dependency_links to ../build/bumperbot_examples_py/bumperbot_examples_py.egg-info/dependency_links.txt
+[3.439s] writing entry points to ../build/bumperbot_examples_py/bumperbot_examples_py.egg-info/entry_points.txt
+[3.440s] writing requirements to ../build/bumperbot_examples_py/bumperbot_examples_py.egg-info/requires.txt
+[3.440s] writing top-level names to ../build/bumperbot_examples_py/bumperbot_examples_py.egg-info/top_level.txt
+[3.440s] writing manifest file '../build/bumperbot_examples_py/bumperbot_examples_py.egg-info/SOURCES.txt'
+[3.529s] reading manifest file '../build/bumperbot_examples_py/bumperbot_examples_py.egg-info/SOURCES.txt'
+[3.531s] writing manifest file '../build/bumperbot_examples_py/bumperbot_examples_py.egg-info/SOURCES.txt'
+[3.531s] running build
+[3.531s] running build_py
+[3.532s] creating /home/sushant-ros/my_bots/src/build/bumperbot_examples_py/build
+[3.532s] creating /home/sushant-ros/my_bots/src/build/bumperbot_examples_py/build/lib
+[3.532s] creating /home/sushant-ros/my_bots/src/build/bumperbot_examples_py/build/lib/bumperbot_examples_py
+[3.532s] copying bumperbot_examples_py/__init__.py -> /home/sushant-ros/my_bots/src/build/bumperbot_examples_py/build/lib/bumperbot_examples_py
+[3.532s] copying bumperbot_examples_py/simple_parameter.py -> /home/sushant-ros/my_bots/src/build/bumperbot_examples_py/build/lib/bumperbot_examples_py
+[3.533s] running install
+[3.545s] running install_lib
+[3.606s] creating /home/sushant-ros/my_bots/src/install/bumperbot_examples_py/lib/python3.12/site-packages/bumperbot_examples_py
+[3.606s] copying /home/sushant-ros/my_bots/src/build/bumperbot_examples_py/build/lib/bumperbot_examples_py/__init__.py -> /home/sushant-ros/my_bots/src/install/bumperbot_examples_py/lib/python3.12/site-packages/bumperbot_examples_py
+[3.606s] copying /home/sushant-ros/my_bots/src/build/bumperbot_examples_py/build/lib/bumperbot_examples_py/simple_parameter.py -> /home/sushant-ros/my_bots/src/install/bumperbot_examples_py/lib/python3.12/site-packages/bumperbot_examples_py
+[3.606s] byte-compiling /home/sushant-ros/my_bots/src/install/bumperbot_examples_py/lib/python3.12/site-packages/bumperbot_examples_py/__init__.py to __init__.cpython-312.pyc
+[3.606s] byte-compiling /home/sushant-ros/my_bots/src/install/bumperbot_examples_py/lib/python3.12/site-packages/bumperbot_examples_py/simple_parameter.py to simple_parameter.cpython-312.pyc
+[3.606s] running install_data
+[3.607s] creating /home/sushant-ros/my_bots/src/install/bumperbot_examples_py/share/ament_index
+[3.607s] creating /home/sushant-ros/my_bots/src/install/bumperbot_examples_py/share/ament_index/resource_index
+[3.607s] creating /home/sushant-ros/my_bots/src/install/bumperbot_examples_py/share/ament_index/resource_index/packages
+[3.607s] copying resource/bumperbot_examples_py -> /home/sushant-ros/my_bots/src/install/bumperbot_examples_py/share/ament_index/resource_index/packages
+[3.607s] copying package.xml -> /home/sushant-ros/my_bots/src/install/bumperbot_examples_py/share/bumperbot_examples_py
+[3.608s] running install_egg_info
+[3.673s] Copying ../build/bumperbot_examples_py/bumperbot_examples_py.egg-info to /home/sushant-ros/my_bots/src/install/bumperbot_examples_py/lib/python3.12/site-packages/bumperbot_examples_py-0.0.0-py3.12.egg-info
+[3.675s] running install_scripts
+[3.948s] Installing simple_parameter script to /home/sushant-ros/my_bots/src/install/bumperbot_examples_py/lib/bumperbot_examples_py
+[3.949s] writing list of installed files to '/home/sushant-ros/my_bots/src/build/bumperbot_examples_py/install.log'
+[4.013s] Invoked command in '/home/sushant-ros/my_bots/src/bumperbot_examples_py' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/sushant-ros/my_bots/src/build/bumperbot_examples_py/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/sushant-ros/my_bots/src/install/bumperbot_examples_py/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/bumperbot_examples_py build --build-base /home/sushant-ros/my_bots/src/build/bumperbot_examples_py/build install --record /home/sushant-ros/my_bots/src/build/bumperbot_examples_py/install.log --single-version-externally-managed install_data
