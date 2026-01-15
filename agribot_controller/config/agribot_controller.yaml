@@ -21,7 +21,7 @@ diff_drive_base_controller:
       - right_rear_wheel_joint
 
     wheel_radius: 0.05
-    wheel_separation: 0.36
+    wheel_separation: 0.509
 
     publish_rate: 50.0
     base_frame_id: base_link
