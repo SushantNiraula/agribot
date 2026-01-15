@@ -292,9 +292,9 @@
     <material name="silver"/>
   </visual>
   <collision>
-    <origin xyz="0.297257 0.219744 0.226988" rpy="0 0 0"/>
+    <origin xyz="0.0 -0.007 0.0" rpy="1.57 0 0"/>
     <geometry>
-      <mesh filename="file://$(find agribot_description)/meshes/right_rear_link_1.stl" scale="0.001 0.001 0.001"/>
+      <cylinder radius="0.05" length="0.045"/>
     </geometry>
   </collision>
 </link>
@@ -313,9 +313,9 @@
     <material name="silver"/>
   </visual>
   <collision>
-    <origin xyz="-0.004716 0.219744 0.226222" rpy="0 0 0"/>
+    <origin xyz="0.0 -0.007 0.0" rpy="1.57 0 0"/>
     <geometry>
-      <mesh filename="file://$(find agribot_description)/meshes/right_mid_link_1.stl" scale="0.001 0.001 0.001"/>
+      <cylinder radius="0.05" length="0.045"/>
     </geometry>
   </collision>
 </link>
@@ -334,9 +334,9 @@
     <material name="silver"/>
   </visual>
   <collision>
-    <origin xyz="-0.354422 0.219744 0.226222" rpy="0 0 0"/>
+    <origin xyz="0.0 -0.007 0.0" rpy="1.57 0 0"/>
     <geometry>
-      <mesh filename="file://$(find agribot_description)/meshes/right_front_link_1.stl" scale="0.001 0.001 0.001"/>
+      <cylinder radius="0.05" length="0.045"/>
     </geometry>
   </collision>
 </link>
@@ -355,9 +355,9 @@
     <material name="silver"/>
   </visual>
   <collision>
-    <origin xyz="-0.354422 -0.219725 0.226222" rpy="0 0 0"/>
+    <origin xyz="0.0 0.007 0.0" rpy="1.57 0 0"/>
     <geometry>
-      <mesh filename="file://$(find agribot_description)/meshes/left_front_link_1.stl" scale="0.001 0.001 0.001"/>
+      <cylinder radius="0.05" length="0.045"/>
     </geometry>
   </collision>
 </link>
@@ -376,9 +376,9 @@
     <material name="silver"/>
   </visual>
   <collision>
-    <origin xyz="-0.004716 -0.219725 0.226222" rpy="0 0 0"/>
+    <origin xyz="0.0 0.007 0.0" rpy="1.57 0 0"/>
     <geometry>
-      <mesh filename="file://$(find agribot_description)/meshes/left_mid_link_1.stl" scale="0.001 0.001 0.001"/>
+      <cylinder radius="0.05" length="0.045"/>
     </geometry>
   </collision>
 </link>
@@ -397,9 +397,9 @@
     <material name="silver"/>
   </visual>
   <collision>
-    <origin xyz="0.298023 -0.219725 0.226222" rpy="0 0 0"/>
+    <origin xyz="0.0 0.007 0.0" rpy="1.57 0 0"/>
     <geometry>
-      <mesh filename="file://$(find agribot_description)/meshes/left_rear_link_1.stl" scale="0.001 0.001 0.001"/>
+      <cylinder radius="0.05" length="0.045"/>
     </geometry>
   </collision>
 </link>
