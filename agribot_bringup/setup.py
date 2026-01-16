@@ -24,7 +24,7 @@ setup(
     },
     entry_points={
         'console_scripts': [
-            "cmd_vel_stamper = agribot_bringup.cmd_vel_stamper:main",
+           
         ],
     },
 )
