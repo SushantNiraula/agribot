@@ -1,11 +1,11 @@
 import rclpy
-from rclpy.node import Node
+from rclpy import Node
 from geometry_msgs.msg import Twist, TwistStamped
 
 class CmdVelStamper(Node):
     def __init__(self):
         super().__init__('cmd_vel_stamper')
-        self.sub= self.create_subscription(Twist, '/cmd_vel', self.cb,10)
+        self.sub= self.create_subscription(Twist, '/cmd_vel', self.cb, 10)
         self.pub= self.create_publisher(TwistStamped, '/diff_drive_base_controller/cmd_vel', 10)
     def cb(self, msg:Twist):
         out = TwistStamped()

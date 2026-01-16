@@ -26,6 +26,7 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
+            "cmd_vel_stamper_ag = agribot_description.cmd_vel_stamper:main"
         ],
     },
 )
