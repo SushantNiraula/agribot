@@ -58,28 +58,11 @@ def generate_launch_description():
         parameters=[{'config_file': ros_gz_bridge_config}],
         output='screen'
     )
-    spawn_jsb = Node(
-        package="controller_manager",
-        executable="spawner",
-        arguments=["joint_state_broadcaster", "--controller-manager", "/controller_manager"],
-        output="screen",
-    )
-
-    spawn_diff = Node(
-        package="controller_manager",
-        executable="spawner",
-        arguments=["diff_drive_base_controller", "--controller-manager", "/controller_manager"],
-        output="screen",
-    )
-    spawn_controllers = TimerAction(
-    period=7.0,
-    actions=[spawn_jsb, spawn_diff]
-)
+    
 
     return LaunchDescription([
         gazebo,
         spawn_robot,
         ros_gz_bridge,
         robot_state_publisher,
-        spawn_controllers,
     ])
