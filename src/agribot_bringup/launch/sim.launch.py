@@ -6,7 +6,7 @@ from ament_index_python.packages import get_package_share_directory
 import os
 
 def generate_launch_description():
-    description_share = get_package_share_directory("agribot_description")
+    description_share = get_package_share_directory("agribot_bringup")
     gazebo_launch = os.path.join(description_share, "launch", "gazebo.launch.py")
 
     gazebo = IncludeLaunchDescription(
