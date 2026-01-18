@@ -233,3 +233,6 @@ log/build_2026-01-18_10-54-35/agribot_description/stdout_stderr.log
 log/build_2026-01-18_10-54-35/agribot_description/stdout.log
 log/build_2026-01-18_10-54-35/agribot_description/streams.log
 log/list_2026-01-18_10-52-58/logger_all.log
+log/
+install/
+build/
