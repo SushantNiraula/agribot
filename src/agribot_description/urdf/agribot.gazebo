@@ -157,7 +157,7 @@
   <minDepth>0.001</minDepth>
 </gazebo>
 
-<gazebo reference="imu_link_1">
+<gazebo reference="imu_link">
   <material>${wheel_color}</material>
   <mu1>0.2</mu1>
   <mu2>0.2</mu2>
@@ -165,10 +165,22 @@
 </gazebo>
 
 <gazebo reference="lidar_link_1">
-  <material>${wheel_color}</material>
-  <mu1>0.2</mu1>
-  <mu2>0.2</mu2>
-  <self_collide>true</self_collide>
+  <sensor name = "imu_sensor" type = "imu">
+    <always_on>true</always_on>
+    <update_rate>50.0</update_rate>
+    <imu>
+      <angular_velocity>
+        <x><noise type="gaussian"><mean>0.0</mean><stddev>0.001</stddev></noise></x>
+        <y><noise type="gaussian"><mean>0.0</mean><stddev>0.001</stddev></noise></y>
+        <z><noise type="gaussian"><mean>0.0</mean><stddev>0.001</stddev></noise></z>
+      </angular_velocity>
+      <linear_acceleration>
+        <x><noise type="gaussian"><mean>0.0</mean><stddev>0.01</stddev></noise></x>
+        <y><noise type="gaussian"><mean>0.0</mean><stddev>0.01</stddev></noise></y>
+        <z><noise type="gaussian"><mean>0.0</mean><stddev>0.01</stddev></noise></z>
+      </linear_acceleration>
+    </imu>
+    </sensor>
 </gazebo>
 
 <gazebo reference="camera_link_1">
