@@ -404,7 +404,7 @@
   </collision>
 </link>
 
-<link name="imu_link">
+<link name="imu_link_1">
   <inertial>
     <origin xyz="0.0001505183280713085 0.0009028305958420219 -0.0007671413731985752" rpy="0 0 0"/>
     <mass value="0.06787415121849628"/>
@@ -591,7 +591,7 @@
 <joint name="imu_joint" type="fixed">
   <origin xyz="0.0782 0.09499 0.028" rpy="0 0 0"/>
   <parent link="base_link"/>
-  <child link="imu_link"/>
+  <child link="imu_link_1"/>
 </joint>
 
 <joint name="lidar_joint" type="fixed">
