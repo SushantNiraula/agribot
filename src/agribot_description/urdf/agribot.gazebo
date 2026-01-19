@@ -157,24 +157,7 @@
   <minDepth>0.001</minDepth>
 </gazebo>
 
-<gazebo reference="imu_link_1">
-<sensor name = "imu_sensor" type = "imu">
-    <always_on>true</always_on>
-    <update_rate>50.0</update_rate>
-    <imu>
-      <angular_velocity>
-        <x><noise type="gaussian"><mean>0.0</mean><stddev>0.001</stddev></noise></x>
-        <y><noise type="gaussian"><mean>0.0</mean><stddev>0.001</stddev></noise></y>
-        <z><noise type="gaussian"><mean>0.0</mean><stddev>0.001</stddev></noise></z>
-      </angular_velocity>
-      <linear_acceleration>
-        <x><noise type="gaussian"><mean>0.0</mean><stddev>0.01</stddev></noise></x>
-        <y><noise type="gaussian"><mean>0.0</mean><stddev>0.01</stddev></noise></y>
-        <z><noise type="gaussian"><mean>0.0</mean><stddev>0.01</stddev></noise></z>
-      </linear_acceleration>
-    </imu>
-    </sensor>
-</gazebo>
+
 
 <gazebo reference="lidar_link_1">
   <material>${wheel_color}</material>
@@ -194,6 +177,31 @@
         <plugin filename="gz_ros2_control-system" name="gz_ros2_control::GazeboSimROS2ControlPlugin">
             <parameters>$(find agribot_controller)/config/agribot_controller.yaml</parameters>
         </plugin>
-  </gazebo>
+        <plugin filename="gz-sim-imu-system" name="gz::sim::systems::Imu">
+        </plugin>
+</gazebo>
+<gazebo reference="imu_link_1">
+  <sensor name="imu_sensor" type="imu">
+    <always_on>true</always_on>
+    <update_rate>100</update_rate>
+    <gz_frame_id>imu_link_1</gz_frame_id>
+
+    <!-- This topic is what you'll see in `gz topic -l` -->
+    <topic>/imu</topic>
+
+    <imu>
+      <angular_velocity>
+        <x><noise type="gaussian"><mean>0</mean><stddev>0.001</stddev></noise></x>
+        <y><noise type="gaussian"><mean>0</mean><stddev>0.001</stddev></noise></y>
+        <z><noise type="gaussian"><mean>0</mean><stddev>0.001</stddev></noise></z>
+      </angular_velocity>
+      <linear_acceleration>
+        <x><noise type="gaussian"><mean>0</mean><stddev>0.01</stddev></noise></x>
+        <y><noise type="gaussian"><mean>0</mean><stddev>0.01</stddev></noise></y>
+        <z><noise type="gaussian"><mean>0</mean><stddev>0.01</stddev></noise></z>
+      </linear_acceleration>
+    </imu>
+  </sensor>
+</gazebo>
 
 </robot>
