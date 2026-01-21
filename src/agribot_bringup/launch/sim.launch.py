@@ -8,6 +8,7 @@ import os
 def generate_launch_description():
     description_share = get_package_share_directory("agribot_bringup")
     gazebo_launch = os.path.join(description_share, "launch", "gazebo.launch.py")
+    description_path = get_package_share_directory("agribot_description")
 
     gazebo = IncludeLaunchDescription(
         PythonLaunchDescriptionSource(gazebo_launch),
@@ -46,8 +47,17 @@ def generate_launch_description():
             diff_drive_spawner,
         ],
     )
+    ekf_node = Node(
+  package="robot_localization",
+  executable="ekf_node",
+  name="ekf_filter_node",
+  output="screen",
+  parameters=[os.path.join(description_path, "config", "ekf.yaml")]
+)
+
 
     return LaunchDescription([
         gazebo,
         spawn_controllers,
+        ekf_node,
     ])
