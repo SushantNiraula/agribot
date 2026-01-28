@@ -78,8 +78,9 @@ def generate_launch_description():
                     executable='static_transform_publisher',
                     name='base_to_laser_tf',
                     output='screen',
-                    arguments=['0.10','0.00','0.20','0','0','0','base_link','laser']
+                    arguments=['0.10','0.00','0.01','0','0','0','base_link','laser']
                 ),
+            
             ]
         ),
     ])

@@ -6,8 +6,6 @@ ekf_filter_node:
     print_diagnostics: true
     sensor_timeout: 0.2
 
-
-    map_frame: map
     odom_frame: odom
     base_link_frame: base_link
     world_frame: odom
@@ -19,7 +17,7 @@ ekf_filter_node:
     odom0_differential: false
     odom0_relative: false
 
-    # Use x, y, yaw, vx, wz
+    # x, y, yaw, vx, wz
     odom0_config: [true,  true,  false,
                    false, false, true,
                    true,  false, false,
@@ -27,26 +25,18 @@ ekf_filter_node:
                    false, false, false]
 
     # ---------- IMU ----------
-    imu0: /imu
+    imu0: /imu/data_raw
     imu0_queue_size: 50
     imu0_nodelay: true
     imu0_differential: false
     imu0_relative: true
-
     imu0_qos: sensor_data
 
-
-    # Use yaw and yaw rate ONLY (2D rover).
-    # If your IMU orientation is garbage/identity, yaw will be useless. But gyro z should still help.
+    # yaw and yaw rate only
     imu0_config: [false, false, false,
                   false, false, true,
                   false, false, false,
                   false, false, true,
                   false, false, false]
 
-    # This is critical: IMU messages must be in base_link (or have a TF from base_link -> imu_link).
-    # If you have imu_link, publish static TF and set imu0_remove_gravitational_acceleration false unless you provide it.
     imu0_remove_gravitational_acceleration: false
-
-    # If timestamps are slightly off, this helps:
-    sensor_timeout: 0.1
