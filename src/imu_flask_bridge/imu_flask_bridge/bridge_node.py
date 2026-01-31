@@ -36,7 +36,7 @@ class ImuToFlaskBridge(Node):
     def __init__(self):
         super().__init__("imu_to_flask_bridge")
 
-        self.declare_parameter("flask_url", "http://10.35.23.117:5000")
+        self.declare_parameter("flask_url", "http://10.24.173.117:5000")
         self.declare_parameter("imu_topic", "/imu/data_raw")
         self.declare_parameter("odom_topic", "/odometry/filtered")
         self.declare_parameter("scan_topic", "/scan")
