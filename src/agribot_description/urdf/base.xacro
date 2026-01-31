@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+
+<robot name="agribot" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+    <!-- Macro: base -->
+    <xacro:macro name="agribot_base" params="">
+        <link name="base_footprint" />
+
+        <link name="base_link">
+        <inertial>
+            <origin xyz="0.02376726050196793 -8.769362260032664e-06 -0.004748707157977561" rpy="0 0 0"/>
+            <mass value="2.649489026530686"/>
+            <inertia ixx="0.044199" iyy="0.025957" izz="0.057874" ixy="-0.0" iyz="-0.0" ixz="-0.001278"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+            <mesh filename="file://$(find agribot_description)/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+            </geometry>
+            <material name="silver"/>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+            <mesh filename="file://$(find agribot_description)/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+            </geometry>
+        </collision>
+        </link>
+
+    <joint name="base_footprint_joint" type="fixed">
+        <parent link="base_footprint"/>
+        <child link="base_link"/>
+        <origin xyz="0.0 0.0 0.27431" rpy="0.0 0.0 0.0"/>
+  
+    </joint>
+    </xacro:macro>
+
+</robot>

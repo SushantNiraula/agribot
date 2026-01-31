@@ -6,6 +6,9 @@ from launch.launch_description_sources import PythonLaunchDescriptionSource
 from launch_ros.actions import Node
 from ament_index_python.packages import get_package_share_directory
 import os
+from launch.substitutions import Command, PathJoinSubstitution
+from launch_ros.substitutions import FindPackageShare
+
 
 def generate_launch_description():
     esp_port   = LaunchConfiguration('esp_port')
@@ -22,6 +25,24 @@ def generate_launch_description():
         'launch',
         'sllidar_a1_launch.py'
     )
+    ## added robot state publisher for nav2 by sushant
+    robot_state_publisher_node = Node(
+    package='robot_state_publisher',
+    executable='robot_state_publisher',
+    name='robot_state_publisher',
+    output='screen',
+    parameters=[{
+        'robot_description': Command([
+            'xacro ',
+            PathJoinSubstitution([
+                FindPackageShare('agribot_description'),
+                'urdf',
+                'agribot.urdf.xacro'
+            ])
+        ])
+    }]
+)
+
 
     return LaunchDescription([
         DeclareLaunchArgument('esp_port',   default_value='/dev/ttyUSB0'),
@@ -44,6 +65,15 @@ def generate_launch_description():
             },
             output='screen'
         ),
+        robot_state_publisher_node,
+        Node(
+            package='robot_localization',
+            executable='ekf_node',
+            name='ekf_filter_node',
+            output='screen',
+            parameters=[ekf_yaml]
+        ),
+
 
         # LiDAR launch
         IncludeLaunchDescription(
@@ -51,9 +81,12 @@ def generate_launch_description():
             condition=IfCondition(use_lidar),
             launch_arguments={
                 'serial_port': lidar_port,
-                'serial_baudrate': lidar_baud
+                'serial_baudrate': lidar_baud,
+                'frame_id': 'base_laser'
             }.items()
         ),
+        
+        
 
         # Delay these so agent + lidar are up
         TimerAction(
@@ -66,20 +99,13 @@ def generate_launch_description():
                     name='mpu6050_node',
                     output='screen'
                 ),
-                Node(
-                    package='robot_localization',
-                    executable='ekf_node',
-                    name='ekf_filter_node',
-                    output='screen',
-                    parameters=[ekf_yaml]
-                ),
-                Node(
-                    package='tf2_ros',
-                    executable='static_transform_publisher',
-                    name='base_to_laser_tf',
-                    output='screen',
-                    arguments=['0.10','0.00','0.01','0','0','0','base_link','laser']
-                ),
+                # Node(
+                #     package='tf2_ros',
+                #     executable='static_transform_publisher',
+                #     name='base_to_laser_tf',
+                #     output='screen',
+                #     arguments=['0.10','0.00','0.01','0','0','0','base_link','laser']
+                # ),
             
             ]
         ),

@@ -1,0 +1,20 @@
+<?xml version="1.0" ?>
+
+<robot name="agribot" xmlns:xacro="http://www.ros.org/wiki/xacro">
+    <!-- Materials details-->
+    <xacro:include filename="$(find agribot_description)/urdf/materials.xacro" />
+
+    <!-- Robot strutcture actual-->
+    <xacro:include filename="$(find agribot_description)/urdf/base.xacro" />
+    <xacro:include filename="$(find agribot_description)/urdf/extras.xacro" />
+    <xacro:include filename="$(find agribot_description)/urdf/wheels.xacro" />
+    <xacro:include filename="$(find agribot_description)/urdf/sensors.xacro" />
+
+    <!--Control + Simulation -->
+    <xacro:include filename="$(find agribot_description)/urdf/ros2_control.xacro" />
+    <xacro:include filename="$(find agribot_description)/urdf/gazebo.xacro" />
+    <xacro:agribot_base/>
+    <xacro:agribot_sensors/>
+
+</robot>
+

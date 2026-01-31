@@ -1,0 +1,173 @@
+<?xml version="1.0"?>
+
+<robot name="agribot" xmlns:xacro="http://www.ros.org/wiki/xacro">
+    <link name="right_rear_link_1">
+    <inertial>
+        <origin xyz="-2.895443201866854e-08 -0.012371746001831024 -2.6967430338808995e-07" rpy="0 0 0"/>
+        <mass value="0.22366924861365764"/>
+        <inertia ixx="0.000183" iyy="0.000329" izz="0.000183" ixy="0.0" iyz="-0.0" ixz="0.0"/>
+    </inertial>
+    <visual>
+        <origin xyz="0.297257 0.219744 0.226988" rpy="0 0 0"/>
+        <geometry>
+        <mesh filename="file://$(find agribot_description)/meshes/right_rear_link_1.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+        <material name="silver"/>
+    </visual>
+    <collision>
+        <origin xyz="0.0 -0.007 0.0" rpy="1.57 0 0"/>
+        <geometry>
+        <cylinder radius="0.05" length="0.045"/>
+        </geometry>
+    </collision>
+    </link>
+
+    <link name="right_mid_link_1">
+    <inertial>
+        <origin xyz="4.3610298984444323e-07 -0.01237174600182217 -4.540721615930998e-07" rpy="0 0 0"/>
+        <mass value="0.22366924861365764"/>
+        <inertia ixx="0.000183" iyy="0.000329" izz="0.000183" ixy="0.0" iyz="-0.0" ixz="0.0"/>
+    </inertial>
+    <visual>
+        <origin xyz="-0.004716 0.219744 0.226222" rpy="0 0 0"/>
+        <geometry>
+        <mesh filename="file://$(find agribot_description)/meshes/right_mid_link_1.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+        <material name="silver"/>
+    </visual>
+    <collision>
+        <origin xyz="0.0 -0.007 0.0" rpy="1.57 0 0"/>
+        <geometry>
+        <cylinder radius="0.05" length="0.045"/>
+        </geometry>
+    </collision>
+    </link>
+
+    <link name="right_front_link_1">
+    <inertial>
+        <origin xyz="6.358776188930548e-08 -0.012371746001812955 -4.540721606216547e-07" rpy="0 0 0"/>
+        <mass value="0.22366924861365764"/>
+        <inertia ixx="0.000183" iyy="0.000329" izz="0.000183" ixy="0.0" iyz="-0.0" ixz="0.0"/>
+    </inertial>
+    <visual>
+        <origin xyz="-0.354422 0.219744 0.226222" rpy="0 0 0"/>
+        <geometry>
+        <mesh filename="file://$(find agribot_description)/meshes/right_front_link_1.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+        <material name="silver"/>
+    </visual>
+    <collision>
+        <origin xyz="0.0 -0.007 0.0" rpy="1.57 0 0"/>
+        <geometry>
+        <cylinder radius="0.05" length="0.045"/>
+        </geometry>
+    </collision>
+    </link>
+
+    <link name="left_front_link_1">
+    <inertial>
+        <origin xyz="6.358774801151768e-08 0.012371638937615781 -4.5407217499904284e-07" rpy="0 0 0"/>
+        <mass value="0.22366924861365764"/>
+        <inertia ixx="0.000183" iyy="0.000329" izz="0.000183" ixy="-0.0" iyz="-0.0" ixz="-0.0"/>
+    </inertial>
+    <visual>
+        <origin xyz="-0.354422 -0.219725 0.226222" rpy="0 0 0"/>
+        <geometry>
+        <mesh filename="file://$(find agribot_description)/meshes/left_front_link_1.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+        <material name="silver"/>
+    </visual>
+    <collision>
+        <origin xyz="0.0 0.007 0.0" rpy="1.57 0 0"/>
+        <geometry>
+        <cylinder radius="0.05" length="0.045"/>
+        </geometry>
+    </collision>
+    </link>
+
+    <link name="left_mid_link_1">
+    <inertial>
+        <origin xyz="4.3610298313366547e-07 0.007371638937605202 -4.5407217955095724e-07" rpy="0 0 0"/>
+        <mass value="0.22366924861365764"/>
+        <inertia ixx="0.000183" iyy="0.000329" izz="0.000183" ixy="-0.0" iyz="-0.0" ixz="-0.0"/>
+    </inertial>
+    <visual>
+        <origin xyz="-0.004716 -0.219725 0.226222" rpy="0 0 0"/>
+        <geometry>
+        <mesh filename="file://$(find agribot_description)/meshes/left_mid_link_1.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+        <material name="silver"/>
+    </visual>
+    <collision>
+        <origin xyz="0.0 0.007 0.0" rpy="1.57 0 0"/>
+        <geometry>
+        <cylinder radius="0.05" length="0.045"/>
+        </geometry>
+    </collision>
+    </link>
+
+    <link name="left_rear_link_1">
+    <inertial>
+        <origin xyz="1.5544341214202007e-07 0.01237163893759688 -4.5407217599824357e-07" rpy="0 0 0"/>
+        <mass value="0.22366924861365764"/>
+        <inertia ixx="0.000183" iyy="0.000329" izz="0.000183" ixy="-0.0" iyz="-0.0" ixz="-0.0"/>
+    </inertial>
+    <visual>
+        <origin xyz="0.298023 -0.219725 0.226222" rpy="0 0 0"/>
+        <geometry>
+        <mesh filename="file://$(find agribot_description)/meshes/left_rear_link_1.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+        <material name="silver"/>
+    </visual>
+    <collision>
+        <origin xyz="0.0 0.007 0.0" rpy="1.57 0 0"/>
+        <geometry>
+        <cylinder radius="0.05" length="0.045"/>
+        </geometry>
+    </collision>
+    </link>
+
+    <!-- Wheels Joints -->
+    <joint name="right_rear_wheel_joint" type="continuous">
+        <origin xyz="-0.015144 -0.0205 0.005245" rpy="0 0 0"/>
+        <parent link="motor_4"/>
+        <child link="right_rear_link_1"/>
+        <axis xyz="-0.0 1.0 0.0"/>
+    </joint>
+
+    <joint name="right_mid_wheel_joint" type="continuous">
+        <origin xyz="-0.006011 -0.0205 -0.015909" rpy="0 0 0"/>
+        <parent link="motor_5"/>
+        <child link="right_mid_link_1"/>
+        <axis xyz="0.0 1.0 -0.0"/>
+    </joint>
+
+    <joint name="right_front_wheel_joint" type="continuous">
+        <origin xyz="-0.00601 -0.0205 -0.015909" rpy="0 0 0"/>
+        <parent link="motor_6"/>
+        <child link="right_front_link_1"/>
+        <axis xyz="0.0 1.0 -0.0"/>
+    </joint>
+
+    <joint name="left_front_wheel_joint" type="continuous">
+        <origin xyz="0.01591 0.0205 0.006011" rpy="0 0 0"/>
+        <parent link="motor_1"/>
+        <child link="left_front_link_1"/>
+        <axis xyz="-0.0 1.0 0.0"/>
+    </joint>
+
+    <joint name="left_mid_wheel_joint" type="continuous">
+        <origin xyz="0.015909 0.0205 0.006011" rpy="0 0 0"/>
+        <parent link="motor_2"/>
+        <child link="left_mid_link_1"/>
+        <axis xyz="-0.0 1.0 0.0"/>
+    </joint>
+
+    <joint name="left_rear_wheel_joint" type="continuous">
+        <origin xyz="0.00601 0.0205 -0.015909" rpy="0 0 0"/>
+        <parent link="motor_3"/>
+        <child link="left_rear_link_1"/>
+        <axis xyz="-0.0 1.0 -0.0"/>
+    </joint>
+
+</robot>

@@ -1,0 +1,116 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <!-- Add sensors to an already-existing robot that has base_link -->
+  <xacro:macro name="agribot_sensors" params="">
+
+    <!-- ===== Mesh links (your existing STL containers) ===== -->
+    <link name="imu_link_1">
+      <inertial>
+        <origin xyz="0.0001505183280713085 0.0009028305958420219 -0.0007671413731985752" rpy="0 0 0"/>
+        <mass value="0.06787415121849628"/>
+        <inertia ixx="9e-06" iyy="1.4e-05" izz="2.2e-05" ixy="0" iyz="0" ixz="0"/>
+      </inertial>
+      <visual>
+        <origin xyz="-0.0782 -0.09499 -0.028" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="file://$(find agribot_description)/meshes/imu_link_1.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+        <material name="silver"/>
+      </visual>
+      <collision>
+        <origin xyz="-0.0782 -0.09499 -0.028" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="file://$(find agribot_description)/meshes/imu_link_1.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+      </collision>
+    </link>
+
+    <link name="lidar_link_1">
+      <inertial>
+        <origin xyz="-0.05105723521362256 4.464678925921589e-07 0.011388122125470204" rpy="0 0 0"/>
+        <mass value="0.24203789804385267"/>
+        <inertia ixx="9.8e-05" iyy="0.000133" izz="0.00018" ixy="0" iyz="0" ixz="1.1e-05"/>
+      </inertial>
+      <visual>
+        <origin xyz="-0.0982 0.01501 -0.03" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="file://$(find agribot_description)/meshes/lidar_link_1.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+        <material name="silver"/>
+      </visual>
+      <collision>
+        <origin xyz="-0.0982 0.01501 -0.03" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="file://$(find agribot_description)/meshes/lidar_link_1.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+      </collision>
+    </link>
+
+    <link name="camera_link_1">
+      <inertial>
+        <origin xyz="0.0013710521364758976 0.0004246940467724747 -2.568385903262138e-10" rpy="0 0 0"/>
+        <mass value="0.3825680956213953"/>
+        <inertia ixx="0.000186" iyy="6.2e-05" izz="0.000153" ixy="-2e-06" iyz="0" ixz="0"/>
+      </inertial>
+      <visual>
+        <origin xyz="-0.1332 1e-05 -0.0125" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="file://$(find agribot_description)/meshes/camera_link_1.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+        <material name="silver"/>
+      </visual>
+      <collision>
+        <origin xyz="-0.1332 1e-05 -0.0125" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="file://$(find agribot_description)/meshes/camera_link_1.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+      </collision>
+    </link>
+
+    <!-- ===== Canonical frames ===== -->
+    <link name="imu_link"/>
+    <joint name="imu_link_joint" type="fixed">
+      <origin xyz="0.0782 0.09499 0.028" rpy="0 0 0"/>
+      <parent link="base_link"/>
+      <child link="imu_link"/>
+    </joint>
+    <joint name="imu_mesh_joint" type="fixed">
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <parent link="imu_link"/>
+      <child link="imu_link_1"/>
+    </joint>
+
+    <link name="base_laser"/>
+    <joint name="base_laser_joint" type="fixed">
+      <origin xyz="0.0982 -0.01501 0.03" rpy="0 0 0"/>
+      <parent link="base_link"/>
+      <child link="base_laser"/>
+    </joint>
+    <joint name="lidar_mesh_joint" type="fixed">
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <parent link="base_laser"/>
+      <child link="lidar_link_1"/>
+    </joint>
+
+    <link name="camera_link"/>
+    <link name="camera_optical_frame"/>
+    <joint name="camera_link_joint" type="fixed">
+      <origin xyz="0.1332 -1e-05 0.0125" rpy="0 0 0"/>
+      <parent link="base_link"/>
+      <child link="camera_link"/>
+    </joint>
+    <joint name="camera_mesh_joint" type="fixed">
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <parent link="camera_link"/>
+      <child link="camera_link_1"/>
+    </joint>
+    <joint name="camera_optical_joint" type="fixed">
+      <parent link="camera_link"/>
+      <child link="camera_optical_frame"/>
+      <origin xyz="0 0 0" rpy="-1.57079632679 0 -1.57079632679"/>
+    </joint>
+
+  </xacro:macro>
+
+</robot>
